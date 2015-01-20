@@ -33,19 +33,28 @@
 ****/
 
 body {
-  font-family: "Open Sans", "Merriweather", "PT Serif", Georgia, "Times New Roman", serif;
+  font-family: "Merriweather", "PT Serif", Georgia, "Times New Roman", serif; 
 }
 
 html, body {
   height: 100%;
 }
 
+hr { display: block; 
+    height: 1px;
+    border: 0; 
+    border-top: 1px #7f8c8d;
+    opacity: 0.50;
+    margin: 20px 0; 
+    padding: 0; 
+}
+
 ul {
-    color: #7f8c8d;
+    color: #666;
 }
 
 li {
-    color: #7f8c8d;
+    color: #666;
 }
 
 /* unvisited link */
@@ -231,7 +240,7 @@ table {
 .pagination,
 .button {
   font-size: 1rem;
-  font-family: "Open Sans", 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: "Merriweather", "PT Serif", Georgia, "Times New Roman", serif; 
   font-weight: 300;
   text-align: center;
 }
@@ -306,7 +315,7 @@ table {
 }
 
 form {
-  font-family: "Open Sans", 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: "Merriweather", "PT Serif", Georgia, "Times New Roman", serif; 
   font-weight: 300;
   font-size: 1rem;
 }
@@ -316,9 +325,10 @@ textarea.input {
 }
 
 p {
+  font-family: "Merriweather", "PT Serif", Georgia, "Times New Roman", serif; 
   font-weight: 300;
   line-height: 1.5;
-  color: #7f8c8d;
+  color: #666;
 }
 
 abbr {
@@ -327,7 +337,7 @@ abbr {
 }
 
 code {
-  font-family: "Open Sans", 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: "Merriweather", "PT Serif", Georgia, "Times New Roman", serif; 
   border-radius: 3px;
   border: 1px solid #F8F8F8;
   margin: 1px 2px;
@@ -340,7 +350,7 @@ code {
 
 pre {
   font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  color: #7f8c8d;
+  color: #666;
   background-color: transparent;
   padding: 1.125em;
   font-size: 0.85rem;
@@ -355,7 +365,7 @@ pre > code {
     margin: 0;
     padding: 0;
 	display: block;
-    color: #444;
+    color: #666;
 }
 
 .highlight .p {
@@ -389,11 +399,15 @@ h5,
 .h5,
 h6,
 .h6 {
-  font-family: "Lato", 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: "Open Sans", 'Helvetica Neue', Helvetica, sans-serif;
   font-weight: 900;
   line-height: 1.2;
   margin: 1em 0 0.5em;
   color: #7f8c8d;
+}
+
+h1, .h1 {
+    color: #ee1356;
 }
 
 .social-icons {

@@ -10,8 +10,8 @@ url:         "http://joshherkness.github.io"
 google_analytics:
 
 # Optional features
-animated:           false
-show_related_posts: false
+animated:           true
+show_related_posts: true
 show_post_footers:  false
 
 # Disqus post comments
