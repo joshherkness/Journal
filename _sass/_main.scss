@@ -294,6 +294,17 @@ table {
   background-color: #999;
 }
 
+.button-gray {
+  color: #7f8c8d;
+  background-color: #fff;
+  border: 1px solid #7f8c8d;
+}
+.button-gray:hover {
+  color: #fff;
+  background-color: #ee1356;
+  border: 1px solid #ee1356;
+}
+
 form {
   font-family: "Open Sans", 'Helvetica Neue', Helvetica, sans-serif;
   font-weight: 300;

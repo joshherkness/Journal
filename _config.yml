@@ -2,8 +2,8 @@
 title:       Joshua Herkness
 email:       joshherkness@gmail.com
 author:      Joshua Herkness
-description: "A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff."
-baseurl:     ""
+description: "Just a students blog"
+baseurl:     "/blog"
 url:         "http://joshherkness.github.io"
 
 # Google analytics
@@ -20,7 +20,7 @@ disqus_shortname:
 
 # Social icons
 show_social_icons: false
-github_username:
+github_username: joshherkness
 stackoverflow_id:
 twitter_username:
 google_plus_id:
@@ -35,7 +35,7 @@ redcarpet:
   extensions: ['smart', 'tables', 'with_toc_data']
 highlighter: pygments
 permalink:    pretty
-paginate:     3
+paginate:     10
 sass:
   compressed: true
   
@@ -43,6 +43,6 @@ sass:
 defaults:
   -
     scope:
-      path: "" # an empty string here means all files in the project
+      path: "/_posts" # an empty string here means all files in the project
     values:
       layout: "post"
