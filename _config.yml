@@ -1,10 +1,10 @@
 # Site settings
-title:       Pixyll
-email:       your_email@example.com
-author:      John Otander
+title:       Joshua Herkness
+email:       joshherkness@gmail.com
+author:      Joshua Herkness
 description: "A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff."
 baseurl:     ""
-url:         "http://pixyll.com"
+url:         "http://joshherkness.github.io"
 
 # Google analytics
 google_analytics:
@@ -33,9 +33,16 @@ flattr_button:
 markdown:     redcarpet
 redcarpet:
   extensions: ['smart', 'tables', 'with_toc_data']
+highlighter: pygments
 permalink:    pretty
 paginate:     3
 sass:
   compressed: true
-gems:
-  - jekyll-sitemap
+  
+# Default Post
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "post"

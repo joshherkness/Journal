@@ -19,19 +19,24 @@ works if <del>for some reason you need to update your post</del>. For consistenc
 Code blocks use the [solarized](http://ethanschoonover.com/solarized) theme. Both the light and
 dark versions are included, so you can swap them out easily. _Solarized Dark_ is the default.
 
-{% highlight ruby %}
-class Awesome < ActiveRecord::Base
-  include EvenMoreAwesome
+This is `this`
 
-  validates_presence_of :something
-  validates :email, email_format: true
+```html
+<p>
+  <script src="https://gist.github.com/<gist_id>.js"> </script>
+  <noscript>
+    <pre>
+       //Your code here
+       //Be sure you escape your tags with &lt; and &gt; when displaying things like HTML.
+    </pre>
+  </noscript>
+</p>
+```
 
-  def initialize(email, name = nil)
-    self.email = email
-    self.name = name
-  end
-end
-{% endhighlight %}
+
+
+
+{% gist 2473463 %}
 
 # Headings!
 
