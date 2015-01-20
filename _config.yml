@@ -1,7 +1,7 @@
 # Site settings
-title:       Josh herkness
+title:       Blog
 email:       joshherkness@gmail.com
-author:      Joshua Herkness
+author:      Josh Herkness
 description: "Just a students blog"
 baseurl:     "/blog"
 url:         "http://joshherkness.github.io"
