@@ -1,9 +1,6 @@
 ---
 layout: post
 title: Blogging with Jekyll
-summary: Lets look at how to use Jekyll to create a blog on github pages.
-category: Jekyll
-tags: Jekyll Blog Markdown
 ---
 
 ## What is Jekyll?
@@ -55,13 +52,13 @@ $ jekyll serve --watch
 
 You should see a site that resembles:
 
-![]({{ site.url }}{{ site.baseurl }}/assets/2015-01-20-pre-compiled-jekyll-site.png)
+![]({{ site.url }}/2015-01-20-pre-compiled-jekyll-site.png)
 
 ## Configuration
 
 Most configuration can be done in the `_config.yml` folder.  Some configuration possibilities that you should be aware of include:
 
-```yaml
+```
 defaults:
   -
     scope:
@@ -74,7 +71,7 @@ This will allow you to set a default default front matter variables and other va
 
 Some other configuration options include:
 
-```yaml
+```
 # Where things are
 source:      .
 destination: ./_site
@@ -86,7 +83,7 @@ collections: null
 
 You can also change the markdown converter, and the highlighter:
 
-```yaml
+```
 # Conversion
 markdown:  redcarpet
 highlighter: pygments
@@ -97,7 +94,7 @@ excerpt_separator: "\n\n"
 
 Any file that contains a YAML front matter block will be processed by Jekyll as a special file.  This block will resemble:
 
-```yaml
+```
 ---
 layout: post
 title: Blogging Like a Hacker
@@ -143,14 +140,14 @@ At some point you'll want to include images and resources along with your text c
 
 Including images in a post:
 
-```yaml
+```
 … which is shown in the screenshot below:
 ![My helpful screenshot]({{ site.url }}/assets/screenshot.jpg)
 ```
 
 Including a PDF in a post:
 
-```yaml
+```
 … you can [get the PDF]({{ site.url }}/assets/mydoc.pdf) directly.
 ```
 
@@ -199,7 +196,7 @@ Or
 
 ## Some more resources...
 
-- Some more on [integrating](http://www.peteroome.com/2013/10/14/running-jekyll-on-github-pages.html) with [Github Pages](https://pages.github.com).
+- Some more on [integrating](http://www.peteroome.com/2013/10/14/running-jekyll-on-github-pages.html) with github pages.
 - Some [themes](http://jekyllthemes.org).
 
 
