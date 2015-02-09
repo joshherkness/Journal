@@ -13,14 +13,15 @@ google_analytics:
 animated:           false
 show_related_posts: true
 show_post_footers:  false
+show_social_icons:  true
+show_rss:						false
 
 # Disqus post comments
 # (leave blank to disable Disqus)
 disqus_shortname:
 
 # Social icons
-show_social_icons: false
-github_username: joshherkness
+github_username:		joshherkness
 stackoverflow_id:
 twitter_username:
 google_plus_id:
@@ -33,16 +34,8 @@ flattr_button:
 markdown:     redcarpet
 redcarpet:
   extensions: ['smart', 'tables', 'with_toc_data']
-highlighter: pygments
+highlighter: 	pygments
 permalink:    pretty
 paginate:     10
 sass:
   compressed: true
-  
-# Default Post
-defaults:
-  -
-    scope:
-      path: "/_posts" # an empty string here means all files in the project
-    values:
-      layout: "post"

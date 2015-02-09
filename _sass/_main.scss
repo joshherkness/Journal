@@ -43,39 +43,44 @@ html, body {
 hr { display: block; 
     height: 1px;
     border: 0; 
-    border-top: 1px #7f8c8d;
+    border-top: 1px #eeeeee;
     opacity: 0.50;
-    margin: 20px 0; 
+    margin: 20px 0;
     padding: 0; 
 }
 
 ul {
-    color: #666;
+    color: #333333;
 }
 
 li {
-    color: #666;
+    color: #333333;
+}
+
+.logo {
+		width: 80px;
 }
 
 /* unvisited link */
 p a:link, footer a:link {
-    color: inherit;
-    text-decoration: underline;
+    color: #4070f8;
+    text-decoration: none;
 }
 
 /* visited link */
 p a:visited, footer a:visited{
-    color: inherit;
+    color: #4070f8;
+    text-decoration: none;
 }
 
 /* mouse over link */
 p a:hover, footer a:hover{
-    color: #ee1356;
+    text-decoration: underline;
 }
 
 /* selected link */
 p a:active, footer a:active{
-    color: #ee1356;
+    text-decoration: underline;
 }
 
 img {
@@ -116,6 +121,7 @@ body {
 
 .site-header {
   font-family: "Open Sans", 'Helvetica Neue', Helvetica, sans-serif;
+  border-bottom: 1px solid #eeeeee;
 }
 
 .site-header a {
@@ -125,23 +131,24 @@ body {
 }
 
 .site-header nav a {
-  font-size: 1.5rem;
+  font-size: 1.0rem;
   font-weight: 300;
-  color: #7f8c8d;
+  color: #333333;
+  opacity: 0.50;
 }
 
 .site-header nav a:hover {
-  color: #ee1356;
+  color: #4070f8;
   opacity: 1;
 }
 
-.site-nav a + a {
+.site-nav a + strong + a {
   margin-left: 1em;
 }
 
-.site-nav {
-  margin: 0;
-  padding: 0;
+.site-nav strong{
+  font-weight:300;
+  color: #4070f8;
 }
 
 .site-header a:hover,
@@ -149,7 +156,8 @@ body {
 .posts .post a:hover .post-title,
 .posts .post a:hover .post-summary {
     
-    color: #ee1356;
+    color: #4070f8;
+    opacity: 1.0;
 }
 
 /*
@@ -199,7 +207,7 @@ table {
 }
 
 .related-post-title {
-  border-bottom: thin solid #f3f3f3;
+  border-bottom: thin solid #eeeeee;
 }
 
 .posts {
@@ -209,7 +217,7 @@ table {
 .posts .post {
   margin-bottom: 0.75em;
   padding-bottom: .375em;
-  border-bottom: thin solid #f3f3f3;
+  border-bottom: thin solid #eeeeee;
 }
 
 .posts .post:last-child {
@@ -220,8 +228,8 @@ table {
 
 .post-link .post-title {
   margin-top: 0;
-  font-weight: 600;
-  color: #7f8c8d;
+  font-weight: 300;
+  color: #333333;
 }
 
 .post-footer {
@@ -280,9 +288,8 @@ table {
   font-weight: 300;
   margin: 0;
   padding: .25em 0;
-  color: #7f8c8d;
-  opacity: 0.75;
-  font-style: italic;
+  color: #333333;
+  opacity: 0.40;
 }
 
 .pagination .button {
@@ -327,8 +334,8 @@ textarea.input {
 p {
   font-family: "Merriweather", "PT Serif", Georgia, "Times New Roman", serif; 
   font-weight: 300;
-  line-height: 1.5;
-  color: #666;
+  line-height: 1.5em;
+  color: #333333;
 }
 
 abbr {
@@ -343,7 +350,7 @@ code {
   margin: 1px 2px;
   padding: 0 5px;
   display: inline-block;
-  color: #ef3a64;
+  color: #2acd82;
   background-color: #F8F8F8;
     
 }
@@ -400,14 +407,14 @@ h5,
 h6,
 .h6 {
   font-family: "Open Sans", 'Helvetica Neue', Helvetica, sans-serif;
-  font-weight: 900;
+  font-weight: 300;
   line-height: 1.2;
   margin: 1em 0 0.5em;
   color: #7f8c8d;
 }
 
 h1, .h1 {
-    color: #ee1356;
+    color: #4070f8;
 }
 
 .social-icons {
@@ -426,6 +433,21 @@ h1, .h1 {
 .social-icons iframe[title=Flattr] {
     position: relative;
     top: 0.1em;
+}
+
+.social-icons a.fa-github:link,
+.social-icons a.fa-github:visited{
+		color:#333333;
+}
+
+.social-icons a.fa-paper-plane:link,
+.social-icons a.fa-paper-plane:visited{
+		color:#2acd82;
+}
+
+.social-icons a.fa-linkedin:link,
+.social-icons a.fa-linkedin:visited{
+		color:#4875b4;
 }
 
 @media screen and (min-width: 48em) {
@@ -459,12 +481,17 @@ h1, .h1 {
   h4 {
     font-size: 1.150rem;
   }
+  
+  .h5,
+  h5 {
+    font-size: 0.75rem;    
+  }
 
   .p,
   p,
   li {
-    font-size: 1.25rem;
-    line-height: 1.8;
+    font-size: 14px;
+    line-height: 1.4p5em;
   }
 
   .small {
@@ -482,7 +509,7 @@ h1, .h1 {
   .posts .post {
     margin-bottom: 1.333em;
     padding-bottom: 0.666em;
-    border-bottom: thin solid #f3f3f3;
+    border-bottom: thin solid #eeeeee;
   }
 
   .posts .post:last-child {
@@ -526,6 +553,11 @@ h1, .h1 {
   .site-header .site-title {
     float: center;
   }
+		
+	.site-nav {
+			margin: 0;
+			padding: 0;
+	}
 
   .site-header .site-nav {
     width: 100%;
@@ -534,6 +566,8 @@ h1, .h1 {
     margin-top: 0.666em;
     margin-bottom: 1.333em;
   }
+    
+  .site
 
   .social-icons .left, .social-icons .right {
     text-align: center;
@@ -573,7 +607,7 @@ h1, .h1 {
   .posts .post {
     margin-bottom: 2.666em;
     padding-bottom: 1.333em;
-    border-bottom: thin solid #f3f3f3;
+    border-bottom: thin solid #eeeeee;
   }
 
   .posts .post:last-child {

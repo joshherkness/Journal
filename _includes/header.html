@@ -1,14 +1,15 @@
-<header class="site-header px2 px-responsive">
-  <div class="mt2 wrap">
-    <div class="measure">
-      <a href="{{ site.url }}" class="site-title">{{ site.author }}</a>
-      <nav class="site-nav right">
+<header class="site-header px-responsive">
+  <div class="mt2 mb1 wrap">
+			<a href="{{ site.url }}" class="site-title">
+				<img class="logo" src="{{ site.url }}{{ site.baseurl}}/assets/logo.svg">
+			</a>
+      <nav class="site-nav m2 left">
         {% include navigation.html %}
       </nav>
-      <div class="clearfix"></div>
-      {% if site.show_social_icons %}
+			<div class="clearfix">
+			{% if site.show_social_icons %}
         {% include social_links.html %}
       {% endif %}
-    </div>
+		</div>
   </div>
 </header>

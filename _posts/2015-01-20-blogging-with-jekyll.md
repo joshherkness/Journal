@@ -52,7 +52,7 @@ $ jekyll serve --watch
 
 You should see a site that resembles:
 
-![]({{ site.url }}/2015-01-20-pre-compiled-jekyll-site.png)
+![]({{ site.url }}{{ site.baseurl}}/assets/2015-01-20-pre-compiled-jekyll-site.png)
 
 ## Configuration
 
