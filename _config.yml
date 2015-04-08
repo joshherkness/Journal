@@ -1,8 +1,8 @@
 # Site settings
-title:       Blog
+title:       Journal
 email:       joshherkness@gmail.com
-author:      Josh Herkness
-description: "Just a students blog"
+author:      Joshua Herkness
+description: "Just a students journal"
 baseurl:     "/journal"
 url:         "http://joshherkness.github.io"
 
@@ -14,7 +14,7 @@ animated:           false
 show_related_posts: true
 show_post_footers:  false
 show_social_icons:  true
-show_rss:						false
+show_rss:			false
 
 # Disqus post comments
 # (leave blank to disable Disqus)
