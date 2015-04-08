@@ -3,7 +3,7 @@ title:       Blog
 email:       joshherkness@gmail.com
 author:      Josh Herkness
 description: "Just a students blog"
-baseurl:     "/blog"
+baseurl:     "/journal"
 url:         "http://joshherkness.github.io"
 
 # Google analytics
