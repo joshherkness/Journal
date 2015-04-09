@@ -161,7 +161,7 @@ img {
 }
 
 .post-footer {
-  @extend .italic;
+  @extend .italic !optional;
 
   margin-top: .75rem;
   text-align: center;
