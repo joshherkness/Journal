@@ -1,46 +1,62 @@
 @charset "UTF-8";
+
 /*
+ * _main.scss
+ * journal
+ * 
+ * Copyright 2015 Joshua Herkness
+ */
 
-  Pixyll
+// Scheme Colors
+$red-color: #ee1356;
+$red-color-dark: #d4114b;
+$red-color-dark-dark: #BA0F43;
+$gray-color-light: #fafafa;
+$gray-color: #7f8c8d;
+$green-color:#2acd82;
+$green-color-dark: #24b370;
+$green-color-dark-dark: #1F9961;
+$blue-color: #4070f8;
+$blue-color-dark: #3a65de;
+$blue-color-dark-dark: #3359C4;
+$yellow-color: #fbeb3a;
+$yellow-color-dark: #E0D234;
+$yellow-color-dark-dark: #C7BA2E;
 
-  A simple, beautiful theme for Jekyll that emphasizes content rather than
-  aesthetic fluff.
+// Social Colors
+$linkedin-color: #4875b4;
+$linkedin-color-dark: #3e659c;
+$github-color: #333333;
+$github-color-dark: #1a1a1a;
+$mail-color: #2acd82;
+$mail-color-dark: #24b370;
+$dribbble-color: #ea4c89;
+$dribbble-color-dark: #D1447A;
 
-  Best served with BASSCSS (http://jxnblk.github.io/basscss)
-
-  Crafted with <3 by John Otander (@4lpine) - ©2015 John Otander
-  MIT License http://opensource.org/licenses/MIT
-
-*/
-
-/****Colors
-    red-color:#ee1356
-    dark-red-color:#d4114b
-    dark-dark-red-color:#BA0F43 
-    grey-color:#7f8c8d
-    green-color:#2acd82
-    dark-green-color:#24b370
-    dark-dark-green-color: #1F9961
-    blue-color:#4070f8
-    dark-blue-color:#3a65de
-    dark-dark-blue-color:#3359C4
-    linked-in-color:#4875b4
-    dark-linked-in-color:#3e659c
-    github-color:#333333
-    dark-github-color:#1a1a1a
-    mail-color:#2acd82
-    dark-mail-color:#24b370
-****/
-
-body {
-  font-family: "Merriweather", "PT Serif", Georgia, "Times New Roman", serif; 
-}
+// Fonts
+$font-stack-display: 'Economica', "Open Sans", Helvetica, serif;
+$font-stack-content: "Merriweather", "PT Serif", Georgia, "Times New Roman", serif;
+$font-stack-code: Consolas, "Liberation Mono", Menlo, Courier, monospace;
 
 html, body {
   height: 100%;
 }
 
-hr { display: block; 
+body {
+	
+	font-family: $font-stack-display;
+	// Make room for the nav-bar
+	padding-top: 70px;
+}
+
+p {
+  	font-family: $font-stack-content;
+}
+
+// Custom hr (line)
+hr { 
+	
+	display: block; 
     height: 1px;
     border: 0; 
     border-top: 1px #eeeeee;
@@ -57,153 +73,65 @@ li {
     color: #333333;
 }
 
-.logo {
+header {
+	.logo {
 		width: 80px;
-}
-
-/* unvisited link */
-p a:link, footer a:link {
-    color: #4070f8;
-    text-decoration: none;
-}
-
-/* visited link */
-p a:visited, footer a:visited{
-    color: #4070f8;
-    text-decoration: none;
-}
-
-/* mouse over link */
-p a:hover, footer a:hover{
-    text-decoration: underline;
-}
-
-/* selected link */
-p a:active, footer a:active{
-    text-decoration: underline;
-}
-
-img {
-  width: auto;
-  max-width: 100%;
-}
-
-.site-wrap {
-  min-height: 100%;
-  margin-bottom: -120px;
-}
-
-.site-wrap:after {
-  content: "";
-  display: block;
-}
-
-.footer, .site-wrap:after {
-  height: 120px;
+	}
 }
 
 body {
-  font-size: 1.5rem;
+  	font-size: 1.5rem;
 
-          box-sizing: border-box;
-     -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+p, footer {
+	
+	// Link in a paragraph and footer
+	a:link, a:visited{
+    	color: $red-color;
+		text-decoration: none;
+	}
+	
+	// Selected Link in a paragraph and footer
+	a:hover, a:active{
+    	color: $red-color;
+		text-decoration: none;
+	}
+}
+
+img {
+	width: auto;
+	max-width: 100%;
+}
+
+.heart {
+	color: $red-color;
+}
+
+.site-wrap {
+	min-height: 100%;
+	margin-bottom: -120px;
+}
+
+.site-wrap:after {
+	content: "";
+	display: block;
+}
+
+.footer, .site-wrap:after {
+	height: 120px;
 }
 
 .gist,
 .gist .highlight .p {
-  font-size: .75rem;
+	font-size: .75rem;
 }
 
 .gist .lines {
-  width: 100%;
-}
-
-.site-header {
-  font-family: "Open Sans", 'Helvetica Neue', Helvetica, sans-serif;
-  border-bottom: 1px solid #eeeeee;
-}
-
-.site-header a {
-  color: #7f8c8d;
-  font-size: 2rem;
-  font-weight: 300;
-}
-
-.site-header nav a {
-  font-size: 1.0rem;
-  font-weight: 300;
-  color: #333333;
-  opacity: 0.50;
-}
-
-.site-header nav a:hover {
-  color: #4070f8;
-  opacity: 1;
-}
-
-.site-nav a + strong + a {
-  margin-left: 1em;
-}
-
-.site-nav strong{
-  font-weight:300;
-  color: #4070f8;
-}
-
-.site-header a:hover,
-.posts .post a:hover .post-meta,
-.posts .post a:hover .post-title,
-.posts .post a:hover .post-summary {
-    
-    color: #4070f8;
-    opacity: 1.0;
-}
-
-/*
-  Table styles copied from Bootstrap
-  Copyright (c) 2013 Twitter, Inc
-*/
-
-table {
-  width: 100%;
-  max-width: 100%;
-  margin-bottom: 1.5;
-  font-size: 1.125rem;
-  // Cells
-  > thead,
-  > tbody,
-  > tfoot {
-    > tr {
-      > th,
-      > td {
-        padding: 12px;
-        line-height: 1.2;
-        vertical-align: top;
-        border-top: 1px solid #333;
-      }
-    }
-  }
-  // Bottom align for column headings
-  > thead > tr > th {
-    vertical-align: bottom;
-    border-bottom: 2px solid #333;
-  }
-  // Remove top border from thead by default
-  > caption + thead,
-  > colgroup + thead,
-  > thead:first-child {
-    > tr:first-child {
-      > th,
-      > td {
-        border-top: 0;
-      }
-    }
-  }
-  // Account for multiple tbody instances
-  > tbody + tbody {
-    border-top: 2px solid #333;
-  }
+	width: 100%;
 }
 
 .related-post-title {
@@ -245,45 +173,10 @@ table {
   border-radius: 50%;
 }
 
-.pagination,
-.button {
-  font-size: 1rem;
-  font-family: "Merriweather", "PT Serif", Georgia, "Times New Roman", serif; 
-  font-weight: 300;
-  text-align: center;
-}
-
-.pagination a, .pagination .disabled {
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  background: #fafafa;
-  border-radius: 0.1875em;
-  border: 1px solid #f3f3f3;
-  color: #7f8c8d;
-  padding: 1em 1.5em;
-}
-
-.pagination .disabled {
-  opacity: 0.5;
-}
-
-.pagination a:hover, .pagination a:focus {
-  background: white;
-  color: #ee1356;
-}
-
-.pagination a:active {
-  background: #f7f7f7;
-}
-
-.wrap .measure {
-  margin: 0 auto;
-}
-
 .meta,
 .post-meta {
   width: auto;
+	font-family: $font-stack-content;
   font-size: 1rem;
   font-weight: 300;
   margin: 0;
@@ -292,38 +185,9 @@ table {
   opacity: 0.40;
 }
 
-.pagination .button {
-  font-size: 1rem;
-  font-weight: 300;
-  letter-spacing: 1px;
-}
-
-.button-disabled {
-  opacity: 0.55;
-  background-color: #7f8c8d;
-}
-
-.button-disabled:hover,
-.button-disabled:active,
-.button-disabled:focus {
-  cursor: not-allowed;
-  background-color: #999;
-}
-
-.button-gray {
-  color: #7f8c8d;
-  background-color: #fff;
-  border: 1px solid #7f8c8d;
-}
-.button-gray:hover {
-  color: #fff;
-  background-color: #ee1356;
-  border: 1px solid #ee1356;
-}
-
 form {
-  font-family: "Merriweather", "PT Serif", Georgia, "Times New Roman", serif; 
-  font-weight: 300;
+  font-family: $font-stack-content; 
+  font-weight: 400;
   font-size: 1rem;
 }
 
@@ -332,7 +196,7 @@ textarea.input {
 }
 
 p {
-  font-family: "Merriweather", "PT Serif", Georgia, "Times New Roman", serif; 
+  font-family: $font-stack-content; 
   font-weight: 300;
   line-height: 1.5em;
   color: #333333;
@@ -344,30 +208,30 @@ abbr {
 }
 
 code {
-  font-family: "Merriweather", "PT Serif", Georgia, "Times New Roman", serif; 
+  font-family: $font-stack-content; 
   border-radius: 3px;
-  border: 1px solid #F8F8F8;
+  border: 1px solid $gray-color-light;
   margin: 1px 2px;
   padding: 0 5px;
   display: inline-block;
-  color: #2acd82;
-  background-color: #F8F8F8;
+  color: $red-color;
+  background-color: $gray-color-light;
     
 }
 
 pre {
-  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-family: $font-stack-code;
   color: #666;
   background-color: transparent;
   padding: 1.125em;
-  font-size: 0.85rem;
+  font-size: 1.5rem;
   line-height: 1.4;
   overflow-x: scroll;
   margin-bottom: 1em;
 }
 
 pre > code {
-    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-family: $font-stack-code;
     border: 0;
     margin: 0;
     padding: 0;
@@ -406,54 +270,19 @@ h5,
 .h5,
 h6,
 .h6 {
-  font-family: "Open Sans", 'Helvetica Neue', Helvetica, sans-serif;
-  font-weight: 300;
+  font-family: $font-stack-display;
+  font-weight: 400;
   line-height: 1.2;
   margin: 1em 0 0.5em;
   color: #7f8c8d;
+	text-transform: uppercase;
 }
 
 h1, .h1 {
-    color: #4070f8;
-}
-
-.social-icons {
-    padding: 0.5em 0 0 0;
-    font-size: 1.25rem;
-    width: 100%;
-}
-.social-icons a.fa {
-    padding: 0.2em;
-    opacity: 0.8;
-    cursor: pointer;
-}
-.social-icons a.fa:hover {
-    opacity: 1;
-}
-.social-icons iframe[title=Flattr] {
-    position: relative;
-    top: 0.1em;
-}
-
-.social-icons a.fa-github:link,
-.social-icons a.fa-github:visited{
-		color:#333333;
-}
-
-.social-icons a.fa-paper-plane:link,
-.social-icons a.fa-paper-plane:visited{
-		color:#2acd82;
-}
-
-.social-icons a.fa-linkedin:link,
-.social-icons a.fa-linkedin:visited{
-		color:#4875b4;
+    color: $red-color;
 }
 
 @media screen and (min-width: 48em) {
-  .site-header .site-title {
-    float: left;
-  }
 
   .meta,
   .post-meta {
@@ -490,7 +319,7 @@ h1, .h1 {
   .p,
   p,
   li {
-    font-size: 14px;
+    font-size: 19px;
     line-height: 1.4p5em;
   }
 
@@ -501,22 +330,11 @@ h1, .h1 {
   table {
     font-size: 1.25rem;
   }
+	
+	.narrow {
+		width: 66%
+	}
 
-  .post-link .post-title {
-    margin-top: 0.5em;
-  }
-
-  .posts .post {
-    margin-bottom: 1.333em;
-    padding-bottom: 0.666em;
-    border-bottom: thin solid #eeeeee;
-  }
-
-  .posts .post:last-child {
-    border-bottom: none;
-    margin-bottom: .333em;
-    padding-bottom: 0;
-  }
 }
 
 @media screen and (max-width: 48em) {
@@ -545,34 +363,10 @@ h1, .h1 {
   h4 {
     font-size: 1rem;
   }
-
-  .site-header {
-    text-align: center;
-  }
-
-  .site-header .site-title {
-    float: center;
-  }
-		
-	.site-nav {
-			margin: 0;
-			padding: 0;
+	
+	.narrow {
+		width: 90%
 	}
-
-  .site-header .site-nav {
-    width: 100%;
-    float: left;
-    text-align: center;
-    margin-top: 0.666em;
-    margin-bottom: 1.333em;
-  }
-    
-  .site
-
-  .social-icons .left, .social-icons .right {
-    text-align: center;
-    float: none;
-  }
 }
 
 @media screen and (min-width: 64em) {
@@ -595,105 +389,25 @@ h1, .h1 {
   h4 {
     font-size: 1.591rem;
   }
-
-  .posts .post-meta {
-    padding-bottom: .2em;
-  }
-
-  .post-link .post-title {
-    margin-top: .125em;
-  }
-
-  .posts .post {
-    margin-bottom: 2.666em;
-    padding-bottom: 1.333em;
-    border-bottom: thin solid #eeeeee;
-  }
-
-  .posts .post:last-child {
-    border-bottom: none;
-    margin-bottom: .666em;
-    padding-bottom: 0;
-  }
+	
+	.narrow {
+		width: 66%
+	}
 }
 
-footer {
-  border-top: thin solid #f3f3f3;
-}
-
-footer,
-footer .wrap {
-  color: #7a7a7a;
-  background-color: #fafafa;
-  font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
-  font-weight: 300;
-  clear: both;
-}
-
-footer:after {
-  content: "";
-  display: block;
-}
-
-@charset "UTF-8";
-
-/*!
-Animate.css - http://daneden.me/animate
-Licensed under the MIT license - http://opensource.org/licenses/MIT
-
-Copyright (c) 2014 Daniel Eden
-*/
-
-.animated {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
-.animated.infinite {
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-}
-
-.animated.hinge {
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
-}
-
-@-webkit-keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(-20px);
-    transform: translateY(-20px);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInDown {
-  0% {
-    opacity: 0;
-
-    -webkit-transform: translateY(-20px) translate3d(0, 0, 0);
-        -ms-transform: translateY(-20px) translate3d(0, 0, 0);
-            transform: translateY(-20px) translate3d(0, 0, 0);
-  }
-
-  100% {
-    opacity: 1;
-
-    -webkit-transform: translateY(0) translate3d(0, 0, 0);
-        -ms-transform: translateY(0) translate3d(0, 0, 0);
-            transform: translateY(0) translate3d(0, 0, 0);
-  }
-}
-
-.fade-in-down {
-  -webkit-animation-name: fadeInDown;
-          animation-name: fadeInDown;
+footer{
+  	color: $gray-color;
+  	background-color: $gray-color-light;
+	
+	p {
+		color: $gray-color;
+		font-family: $font-stack-display;
+  		font-weight: 400;
+		font-size: 20px;
+		text-transform: uppercase;
+		
+		a:link {
+			color: $red-color;
+		}
+	}
 }

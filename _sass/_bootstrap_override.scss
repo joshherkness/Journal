@@ -1,0 +1,100 @@
+/*
+ * _bootstrap_override.scss
+ * journal
+ * 
+ * Copyright 2015 Joshua Herkness
+ */
+
+// Scheme Colors
+$red-color: #ee1356;
+$red-color-dark: #d4114b;
+$red-color-dark-dark: #BA0F43;
+$gray-color-light: #fafafa;
+$gray-color: #7f8c8d;
+$green-color:#2acd82;
+$green-color-dark: #24b370;
+$green-color-dark-dark: #1F9961;
+$blue-color: #4070f8;
+$blue-color-dark: #3a65de;
+$blue-color-dark-dark: #3359C4;
+$yellow-color: #fbeb3a;
+$yellow-color-dark: #E0D234;
+$yellow-color-dark-dark: #C7BA2E;
+
+// Social Colors
+$linkedin-color: #4875b4;
+$linkedin-color-dark: #3e659c;
+$github-color: #333333;
+$github-color-dark: #1a1a1a;
+$mail-color: #2acd82;
+$mail-color-dark: #24b370;
+$dribbble-color: #ea4c89;
+$dribbble-color-dark: #D1447A;
+
+// Fonts
+$font-stack-display: 'Economica', "Open Sans", Helvetica, serif;
+$font-stack-content: "Merriweather", "PT Serif", Georgia, "Times New Roman", serif;
+
+nav li {
+	font: $font-stack-display;
+	font-size: 25px;
+
+}
+
+.navbar-brand img {
+	max-width: 30px;
+	max-height: 30px;
+}
+
+.navbar-default {
+	background-color: $gray-color-light;
+	border-color: $gray-color-light;
+	
+	.navbar-brand:link {
+		padding: 10px 15px;
+		background-color: $red-color;
+	}
+
+	.navbar-brand:hover,
+	.navbar-brand:focus,
+	.navbar-brand:active{
+		background-color: $red-color-dark;
+	}
+}
+
+@media screen and (max-width: 48em) {
+	.navbar-nav {
+		width: 100%;
+		text-align: center;
+		
+		> li {
+			float: none;
+			display: inline-block;
+		}
+	}
+}
+
+a.thumbnail {
+	background: $gray-color-light;
+	border-color: $gray-color-light;
+	text-decoration: none;
+	padding: 30px;
+	
+	h1,h2,h3,h4,h5,h6 {
+		color: $gray-color;
+	}
+	
+	a:link {
+		color: $red-color;
+	}
+}
+
+
+a.thumbnail:hover {
+	
+	h1,h2,h3,h4,h5,h6 {
+		color: $red-color;
+	}
+	box-shadow: none;
+	border-color: transparent;
+}

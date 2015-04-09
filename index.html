@@ -2,18 +2,16 @@
 layout: default
 ---
 
-<div class="home">
-  <div class="posts">
-    {% for post in paginator.posts %}
-      <div class="post">
-        <a href="{{ post.url | prepend: site.baseurl }}" class="post-link">
-          <h3 class="h3 post-title">{{ post.title }}</h3>
-          <p class="post-meta small">{{ post.date | date: "%b %-d, %Y" }}</p>
-          <p class="post-summary">{{ post.summary }}</p>
-        </a>
-      </div>
-    {% endfor %}
-  </div>
-
-  {% include pagination.html %}
+<div class="container narrow" id="home">
+    <div class="row">
+		{% for post in paginator.posts %}
+		  	<div class="col-lg-4">
+		  		<a href="{{ post.url | prepend: site.baseurl }}" class="thumbnail">
+      				<h1>{{ post.title }}</h1>
+					<p class="post-meta small">{{ post.date | date: "%b %-d, %Y" }}</p>
+          			<p class="post-summary">{{ post.summary }}</p>
+				</a>
+		  	</div>
+    	{% endfor %}
+	</div>
 </div>
