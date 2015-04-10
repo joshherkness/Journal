@@ -34,12 +34,20 @@ $dribbble-color-dark: #D1447A;
 // Fonts
 $font-stack-display: 'Economica', "Open Sans", Helvetica, serif;
 $font-stack-content: "Merriweather", "PT Serif", Georgia, "Times New Roman", serif;
+$font-stack-code: Consolas, "Liberation Mono", Menlo, Courier, monospace;
 
-nav li {
-	font: $font-stack-display;
-	font-size: 25px;
-
+// Nav settings
+nav {
+	font-family: $font-stack-display;
+	
+	// List item
+	li {
+		font: $font-stack-display;
+		font-size: 25px;
+		text-transform: uppercase;
+	}
 }
+
 
 .navbar-brand img {
 	max-width: 30px;

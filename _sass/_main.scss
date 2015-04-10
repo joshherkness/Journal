@@ -35,7 +35,7 @@ $dribbble-color-dark: #D1447A;
 
 // Fonts
 $font-stack-display: 'Economica', "Open Sans", Helvetica, serif;
-$font-stack-content: "Merriweather", "PT Serif", Georgia, "Times New Roman", serif;
+$font-stack-content: "Helvetica Neue", "Merriweather", "PT Serif", Georgia, "Times New Roman", serif;
 $font-stack-code: Consolas, "Liberation Mono", Menlo, Courier, monospace;
 
 html, body {
@@ -44,13 +44,50 @@ html, body {
 
 body {
 	
-	font-family: $font-stack-display;
+	font-family: $font-stack-content;
+	
+	font-size: 1.5rem;
+
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	
 	// Make room for the nav-bar
 	padding-top: 70px;
 }
 
+// Headers
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+	
+  	font-family: $font-stack-display;
+  	font-weight: 400;
+  	line-height: 1.2;
+  	margin: 1em 0 0.5em;
+  	color: #7f8c8d;
+	text-transform: uppercase;
+}
+
+// Just primary header
+h1, .h1 {
+    color: $red-color;
+}
+
+h2, h3, h4, h5, h6 {
+	padding-top: 50px;
+}
+
 p {
+	
   	font-family: $font-stack-content;
+	line-height: 4rem;
+}
+
+ul {
+	color: #333333;
+}
+
+li {
+	color: #333333;
 }
 
 // Custom hr (line)
@@ -65,26 +102,10 @@ hr {
     padding: 0; 
 }
 
-ul {
-    color: #333333;
-}
-
-li {
-    color: #333333;
-}
-
 header {
 	.logo {
 		width: 80px;
 	}
-}
-
-body {
-  	font-size: 1.5rem;
-
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
 }
 
 p, footer {
@@ -134,30 +155,8 @@ img {
 	width: 100%;
 }
 
-.related-post-title {
-  border-bottom: thin solid #eeeeee;
-}
-
-.posts {
-  margin: 0;
-}
-
-.posts .post {
-  margin-bottom: 0.75em;
-  padding-bottom: .375em;
-  border-bottom: thin solid #eeeeee;
-}
-
-.posts .post:last-child {
-  border-bottom: none;
-  margin-bottom: .375em;
-  padding-bottom: 0;
-}
-
-.post-link .post-title {
-  margin-top: 0;
-  font-weight: 300;
-  color: #333333;
+.post-summary {
+	color: $gray-color;
 }
 
 .post-footer {
@@ -195,18 +194,12 @@ textarea.input {
   height: 8em;
 }
 
-p {
-  font-family: $font-stack-content; 
-  font-weight: 300;
-  line-height: 1.5em;
-  color: #333333;
-}
-
 abbr {
   border-bottom: 1px black dotted;
   cursor: help;
 }
 
+// Inline code
 code {
   font-family: $font-stack-content; 
   border-radius: 3px;
@@ -219,6 +212,7 @@ code {
     
 }
 
+// Block code
 pre {
   font-family: $font-stack-code;
   color: #666;
@@ -227,13 +221,14 @@ pre {
   font-size: 1.5rem;
   line-height: 1.4;
   overflow-x: scroll;
-  margin-bottom: 1em;
+	margin: 3em 0;
 }
 
+// Text inside block code
 pre > code {
     font-family: $font-stack-code;
     border: 0;
-    margin: 0;
+    margin: 10px 0;
     padding: 0;
 	display: block;
     color: #666;
@@ -244,42 +239,21 @@ pre > code {
   line-height: 1;
 }
 
+// Block quote
 blockquote {
-  padding: 1.33em;
-  font-style: italic;
-  border-left: 5px solid #7f8c8d;
+	font-size: 1.5rem;
+  	padding: 1.33em;
+  	font-style: italic;
+  	border-left: 10px solid $gray-color-light;
 }
 
+// Block quote footer
 blockquote footer {
-  font-size: .85rem;
-  font-style: normal;
-  background-color: #fff;
-  color: #7f8c8d;
-  border-color: transparent;
-}
-
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6 {
-  font-family: $font-stack-display;
-  font-weight: 400;
-  line-height: 1.2;
-  margin: 1em 0 0.5em;
-  color: #7f8c8d;
-	text-transform: uppercase;
-}
-
-h1, .h1 {
-    color: $red-color;
+	font-size: 2rem;
+  	font-style: normal;
+  	background-color: #fff;
+	color: #dedede;
+  	border-color: transparent;
 }
 
 @media screen and (min-width: 48em) {
@@ -289,31 +263,6 @@ h1, .h1 {
     margin: 0;
     padding: 0;
     font-size: 1.25rem;
-  }
-
-  .h1,
-  h1 {
-    font-size: 3.250rem;
-  }
-
-  .h2,
-  h2 {
-    font-size: 2.298rem;
-  }
-
-  .h3,
-  h3 {
-    font-size: 1.625rem;
-  }
-
-  .h4,
-  h4 {
-    font-size: 1.150rem;
-  }
-  
-  .h5,
-  h5 {
-    font-size: 0.75rem;    
   }
 
   .p,
@@ -337,32 +286,14 @@ h1, .h1 {
 
 }
 
+// Small screens
 @media screen and (max-width: 48em) {
-  blockquote {
-    margin-left: 1rem;
-    margin-right: 0;
-    padding: 0.5em;
-  }
-
-  .h1,
-  h1 {
-    font-size: 2.827rem;
-  }
-
-  .h2,
-  h2 {
-    font-size: 1.999rem;
-  }
-
-  .h3,
-  h3 {
-    font-size: 1.413rem;
-  }
-
-  .h4,
-  h4 {
-    font-size: 1rem;
-  }
+	
+  	blockquote {
+    	margin-left: 1rem;
+		margin-right: 0;
+		padding: 0.5em;
+  	}
 	
 	.narrow {
 		width: 90%
@@ -370,25 +301,6 @@ h1, .h1 {
 }
 
 @media screen and (min-width: 64em) {
-  .h1,
-  h1 {
-    font-size: 4.498rem;
-  }
-
-  .h2,
-  h2 {
-    font-size: 3.18rem;
-  }
-
-  .h3,
-  h3 {
-    font-size: 2.249rem;
-  }
-
-  .h4,
-  h4 {
-    font-size: 1.591rem;
-  }
 	
 	.narrow {
 		width: 66%
@@ -396,7 +308,8 @@ h1, .h1 {
 }
 
 footer{
-  	color: $gray-color;
+  	
+	color: $gray-color;
   	background-color: $gray-color-light;
 	
 	p {

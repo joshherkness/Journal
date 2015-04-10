@@ -21,6 +21,7 @@ layout: default
 </div>
 
 <article class="container narrow" id="post-content">
+	<br>
 	{{ content }}
 </article>
 
@@ -45,13 +46,18 @@ layout: default
 {% endif %}
 
 {% if site.show_related_posts %}
-  <h3 class="related-post-title">Related Posts</h3>
-  {% for post in site.related_posts %}
-    <div class="post ml2">
-      <a href="{{ post.url | prepend: site.baseurl }}" class="post-link">
-        <h4 class="post-title">{{ post.title }}</h4>
-        <p class="post-summary">{{ post.summary }}</p>
-      </a>
-    </div>
-  {% endfor %}
+<div class="container narrow">
+	<div class="row">
+		<h1>Related Posts</h1>
+		{% for post in site.related_posts %}
+		<div class="col-lg-4">
+		  	<a href="{{ post.url | prepend: site.baseurl }}" class="thumbnail">
+      			<h1>{{ post.title }}</h1>
+				<p class="post-meta small">{{ post.date | date: "%b %-d, %Y" }}</p>
+          		<p class="post-summary">{{ post.summary }}</p>
+			</a>
+		</div>
+		{% endfor %}
+	</div>
+</div>
 {% endif %}
