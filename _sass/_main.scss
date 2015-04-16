@@ -33,6 +33,9 @@ $mail-color-dark: #24b370;
 $dribbble-color: #ea4c89;
 $dribbble-color-dark: #D1447A;
 
+// Body Font Color
+$body-color: #504e4c;
+
 // Fonts
 $font-stack-display: 'Economica', "Open Sans", Helvetica, serif;
 $font-stack-content: "Helvetica Neue", "Merriweather", "PT Serif", Georgia, "Times New Roman", serif;
@@ -79,7 +82,9 @@ h2, h3, h4, h5, h6 {
 p {
 	
   	font-family: $font-stack-content;
-	line-height: 4rem;
+	color: $body-color;
+	line-height: 25px;
+	font-size: 16px;
 }
 
 ul {
@@ -175,9 +180,9 @@ img {
 .meta,
 .post-meta {
   width: auto;
-	font-family: $font-stack-content;
-  font-size: 1rem;
-  font-weight: 300;
+  font-family: $font-stack-content;
+  font-size: 1.5rem;
+  font-weight: 400;
   margin: 0;
   padding: .25em 0;
   color: #333333;
@@ -243,7 +248,7 @@ pre > code {
 blockquote {
 	font-size: 1.5rem;
   	padding: 1.33em;
-  	font-style: italic;
+  	font-style: normal;
   	border-left: 10px solid $gray-color-light;
 }
 
@@ -262,18 +267,11 @@ blockquote footer {
   .post-meta {
     margin: 0;
     padding: 0;
-    font-size: 1.25rem;
-  }
-
-  .p,
-  p,
-  li {
-    font-size: 19px;
-    line-height: 1.4p5em;
+    font-size: 1.5rem;
   }
 
   .small {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 
   table {
@@ -304,6 +302,10 @@ blockquote footer {
 	
 	.narrow {
 		width: 66%
+	}
+	
+	.half {
+		width: 50%;
 	}
 }
 

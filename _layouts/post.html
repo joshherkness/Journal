@@ -7,7 +7,7 @@ layout: default
 {% assign minutes = 1 %}
 {% endif %}
 
-<div class="container narrow">
+<div class="container narrow half">
 	<div class="row">
 		<h1>{{ page.title }}</h1>
   		<span class="post-meta">{{ page.date | date: "%b %-d, %Y" }}</span>
@@ -20,7 +20,7 @@ layout: default
 	</div>
 </div>
 
-<article class="container narrow" id="post-content">
+<article class="container narrow half" id="post-content">
 	<br>
 	{{ content }}
 </article>
