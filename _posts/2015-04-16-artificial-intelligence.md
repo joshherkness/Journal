@@ -3,7 +3,6 @@ layout:     post
 title:      Artificial Intelligence&#58; Where will it lead?
 date:       2015-04-16 12:52:00
 summary:    The decimation of our entire culture could be subject to a single machine told simply to clean a persons home. Could moral responsibility be the future of Artificial Intelligence?
-categories: AI school artificial+intelligence research
 ---
 
 ## Imagine...
